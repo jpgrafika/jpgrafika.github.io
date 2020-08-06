@@ -1,8 +1,7 @@
-import json
 import os
+import sys
 
 from staticjinja import Site
-
 
 if __name__ == "__main__":
     projects = os.listdir('projects')
@@ -13,10 +12,11 @@ if __name__ == "__main__":
 
     photos = []
     k = 0
-    for photo in projects:
+    for photo in sorted(projects, reverse=True):
         k += 1
-        print(photo)
-        photos.append({'url': photo, 'class': f'photo-{chr(k + 96)}'})
+        position_id = k % 8
+        class_name = f'photo-{chr(position_id + 96)}'
+        photos.append({'url': photo, 'class': class_name})
 
     index_context = {
         'page_name': 'index',
@@ -36,4 +36,4 @@ if __name__ == "__main__":
         ('about.html', about_context),
         ('contact.html', contact_context),
     ])
-    site.render(use_reloader=True)
+    site.render(use_reloader=int(sys.argv[1]) == 1 if len(sys.argv) > 1 else False)
