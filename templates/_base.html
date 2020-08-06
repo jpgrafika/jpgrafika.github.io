@@ -1,0 +1,36 @@
+<html lang="en-us">
+<head title="boardgame">
+    <title>Joanna Piotrowska Grafika</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="../img/logo.svg" alt=""/>
+    </div>
+    <div class="nav">
+        <div class="nav-button{% if page_name=='index' %} nav-active{% endif %}" onclick="this.classList.add('nav-active')">
+            <div>
+            <a href="/">
+                PROJEKTY
+            </a>
+            </div>
+        </div>
+        <div class="nav-button{% if page_name=='about' %} nav-active{% endif %}" onclick="this.classList.add('nav-active')">
+            <div>
+            <a href="about.html">
+                O MNIE
+            </a>
+            </div>
+        </div>
+        <div class="nav-button{% if page_name=='contact' %} nav-active{% endif %}" onclick="this.classList.add('nav-active')">
+            <div>
+            <a href="contact.html">
+                KONTAKT
+            </a>
+            </div>
+        </div>
+    </div>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
