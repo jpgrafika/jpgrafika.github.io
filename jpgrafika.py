@@ -9,10 +9,12 @@ if __name__ == "__main__":
     if len(projects) == 2:
         projects += projects
         projects += reversed(projects)
+    else:
+        projects = sorted(projects, reverse=True)
 
     photos = []
     k = 0
-    for photo in sorted(projects, reverse=True):
+    for photo in projects:
         k += 1
         position_id = k % 8
         class_name = f'photo-{chr(position_id + 96)}'

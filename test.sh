@@ -1,3 +1,3 @@
 #!/bin/sh
-python jpgrafika.py build
+python jpgrafika.py
 python -m http.server
