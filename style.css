@@ -1,0 +1,116 @@
+body {
+
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("Montserrat/Montserrat-Regular.ttf");
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+.logo {
+    width: 297px;
+    height: 69.7px;
+    object-fit: contain;
+    margin: 46px;
+}
+.insta {
+    float: right;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.nav-button {
+    flex: 1;
+    text-align: center;
+    width: 104px;
+    height: 24px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 5.4px;
+    color: #000000;
+}
+.content {
+    margin: 75px;
+    display: grid;
+    grid-gap: 75px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 375px 50px 375px;
+}
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin: 30px;
+
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 3.78px;
+    text-align: center;
+    color: #000000;
+}
+
+.photo {
+    border: solid 1px black;
+}
+
+.photo-a {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+.photo-b {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+}
+.photo-c {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+.photo-d {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+}
+.photo-e {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+}
+.photo-f {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+}
+.photo-g {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 2;
+}
+.photo-h {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+}
+
+/*.small-photo {*/
+/*    width: 380px;*/
+/*    height: 380px;*/
+/*    margin: 39px;*/
+/*    border: 1px solid black;*/
+/*}*/
+/*.big-photo {*/
+/*    width: 380px;*/
+/*    height: 510px;*/
+/*    margin: 39px;*/
+/*    border: 1px solid black;*/
+/*}*/
