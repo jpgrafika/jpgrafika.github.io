@@ -8,7 +8,9 @@ if __name__ == "__main__":
 
     if len(projects) == 2:
         projects += projects
-        projects += reversed(projects)
+        projects += projects
+        projects += projects
+        projects += projects
     else:
         projects = sorted(projects, reverse=True)
 
@@ -16,7 +18,7 @@ if __name__ == "__main__":
     k = 0
     for photo in projects:
         k += 1
-        position_id = k % 8
+        position_id = k % 24 or 24
         class_name = f'photo-{chr(position_id + 96)}'
         photos.append({'url': photo, 'class': class_name})
 

@@ -2,18 +2,14 @@
 
 {% block content %}
 
-    <div class="content">
-        {% for photo in photos %}
-            <div class="photo-container {{ photo.class }}"><img class="photo" src="../projects/{{ photo.url }}"></div>
-        {% endfor %}
-    </div>
-    <div class="content">
-        {% for photo in photos2 %}
-            <div class="photo-container {{ photo.class }}"><img class="photo" src="../projects/{{ photo.url }}"></div>
-        {% endfor %}
-    </div>
-    <div class="footer">
-        @JOANNA PIOTROWSKA | JPGRAFIKA
-    </div>
+    {% for photo in photos %}
+        {% if loop.index % 24 == 1 %}
+            <div class="content">
+        {% endif %}
+                <div class="photo-container {{ photo.class }}"><img class="photo" src="../projects/{{ photo.url }}"></div>
+        {% if loop.index % 24 == 0 or loop.index == loop.length %}
+            </div>
+        {% endif %}
+    {% endfor %}
 
 {% endblock %}

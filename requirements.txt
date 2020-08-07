@@ -1,0 +1,2 @@
+pysimplegui==4.28.0
+staticjinja==0.3.5
