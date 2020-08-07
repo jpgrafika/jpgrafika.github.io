@@ -1,2 +1,3 @@
 pysimplegui==4.28.0
 staticjinja==0.3.5
+psutil==5.7.2
