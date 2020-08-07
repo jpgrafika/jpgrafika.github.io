@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import subprocess
 import webbrowser
@@ -16,6 +17,8 @@ class GitHubPagesProject:
 
     def event_handler(self, event_key, values):
         if event_key.startswith('test'):
+            if self.test_process:
+                self.kill_process(self.test_process)
             self.test_process = subprocess.Popen(f'exec ./test.sh', shell=True, cwd=self.path)
             webbrowser.open('http://0.0.0.0:8000')
         elif event_key.startswith('stop'):
