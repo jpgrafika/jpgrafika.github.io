@@ -1,3 +1,3 @@
 #!/bin/sh
-python jpgrafika.py
-python -m http.server
+python3.8 jpgrafika.py
+python3.8 -m http.server

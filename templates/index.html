@@ -6,7 +6,7 @@
         {% if loop.index % 24 == 1 %}
             <div class="content">
         {% endif %}
-                <div class="photo-container {{ photo.class }}"><img class="photo" src="../projects/{{ photo.url }}"></div>
+                <div class="photo-container {{ photo.class }}"><img class="lazy photo" data-src="projects/{{ photo.url }}" alt=""></div>
         {% if loop.index % 24 == 0 or loop.index == loop.length %}
             </div>
         {% endif %}
